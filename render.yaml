@@ -1,0 +1,41 @@
+services:
+  - type: static
+    name: baranded-landing
+    env: static
+    buildCommand: ""         # none; static files only
+    publishPath: .
+    routes:
+      # Send /app to the actual app service
+      - type: redirect
+        source: /app
+        destination: https://app.baranded.com/
+        statusCode: 302
+
+      # Redirect /app/* deep links if you ever want that
+      - type: redirect
+        source: /app/*
+        destination: https://app.baranded.com/:splat
+        statusCode: 302
+
+      # Optional: force https (Render does this, but explicit is fine)
+      - type: redirect
+        source: http://baranded.com/*
+        destination: https://baranded.com/:splat
+        statusCode: 301
+
+    staticPublishers:
+      # Attach cache headers to static assets in /assets
+      - path: /assets
+        headers:
+          - name: Cache-Control
+            value: public, max-age=31536000, immutable
+
+      # Basic security headers (kept minimal for a static page)
+      - path: /
+        headers:
+          - name: X-Content-Type-Options
+            value: nosniff
+          - name: Referrer-Policy
+            value: strict-origin-when-cross-origin
+          - name: Permissions-Policy
+            value: geolocation=(), microphone=(), camera=()
