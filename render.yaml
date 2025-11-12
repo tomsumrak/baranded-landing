@@ -23,6 +23,11 @@ services:
         destination: https://baranded.com/:splat
         statusCode: 301
 
+      - type: redirect
+        source: baranded.com/*
+        destination: https://www.baranded.com/:splat
+        statusCode: 301
+
     staticPublishers:
       # Attach cache headers to static assets in /assets
       - path: /assets
