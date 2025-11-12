@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Baranded – Free AI Brand Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Generate a brand snapshot, logo concepts, colors, and type—free. Then refine in the Baranded app." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&family=Didact+Gothic&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:title" content="Baranded – Free AI Brand Builder" />
+  <meta property="og:description" content="Create a brand snapshot and logo concepts in minutes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.baranded.com/" />
+  <meta property="og:image" content="https://www.baranded.com/assets/og-image.jpg" />
+</head>
+<body>
+  <!-- Topbar -->
+  <header class="topbar">
+    <a class="logo" href="/">
+      <img src="/assets/black-green.webp" alt="Baranded" height="28">
+    </a>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a class="cta" href="https://app.baranded.com">Open App</a>
+    </nav>
+    <button class="hamburger" aria-label="Open menu">☰</button>
+  </header>
+
+  <!-- Mobile menu -->
+  <aside class="drawer" id="drawer">
+    <a href="#features" onclick="closeDrawer()">Features</a>
+    <a href="#how-it-works" onclick="closeDrawer()">How it works</a>
+    <a class="cta" href="https://app.baranded.com">Open App</a>
+  </aside>
+
+  <!-- Hero -->
+  <main class="wrap hero">
+    <h1>Build a brand in minutes—free.</h1>
+    <p class="lead">Answer a few questions. Get a brand snapshot, logo concepts, colors, and type, then refine everything inside the app.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://app.baranded.com/questionnaire.html">Start the Questionnaire</a>
+      <a class="btn ghost" href="https://app.baranded.com">Go to App</a>
+    </div>
+    <img class="hero-img" src="/assets/landing-illustration.webp" alt="Brand preview">
+  </main>
+
+  <!-- Features -->
+  <section id="features" class="wrap grid">
+    <article class="card">
+      <h3>Brand Snapshot</h3>
+      <p>Mission, values, tone—summarized into a clear, shareable doc.</p>
+    </article>
+    <article class="card">
+      <h3>Logo Concepts</h3>
+      <p>Quick icon exploration + text lockups with webfont previews.</p>
+    </article>
+    <article class="card">
+      <h3>Color & Type</h3>
+      <p>Accessible palette and font pairing suggestions.</p>
+    </article>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="wrap steps">
+    <h2>How it works</h2>
+    <ol>
+      <li>Take the short questionnaire</li>
+      <li>Review your brand snapshot</li>
+      <li>Generate logo options and refine</li>
+      <li>Download assets and share</li>
+    </ol>
+    <a class="btn primary" href="https://app.baranded.com/questionnaire.html">Try it now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="/assets/white-green-horizontal-logo.webp" alt="Baranded" height="28">
+      <nav>
+        <a href="https://app.baranded.com/privacy.html">Privacy</a>
+        <a href="https://app.baranded.com/terms.html">Terms</a>
+        <a href="https://donate.stripe.com/00w4gBaUK7y2bF4a7p9ws00" rel="noopener">Donate</a>
+      </nav>
+      <span>© <span id="y"></span> Baranded</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const drawer = document.getElementById('drawer');
+    const hamb = document.querySelector('.hamburger');
+    hamb.addEventListener('click', ()=> drawer.classList.toggle('open'));
+    function closeDrawer(){ drawer.classList.remove('open'); }
+    window.closeDrawer = closeDrawer;
+  </script>
+</body>
+</html>
