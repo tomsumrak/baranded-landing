@@ -10,107 +10,251 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="/assets/favicon.png">
   <link rel="stylesheet" href="/styles.css">
-  <style>
-    /* Bullseye hero */
-    .bullseye{
-      background: var(--primary);
-      color: #fff;
-      /* Sit directly under fixed topbar and center content vertically */
-      padding-top: 64px; /* equals topbar height */
-      padding-bottom: 24px;
-      min-height: 700px; /* larger hero on desktop */
-      display: flex;
-      align-items: center;
-    }
-    .bullseye .inner{
-      max-width: 1200px;
-      margin: 0 auto; /* remove extra gap; top padding handled by .bullseye */
-      padding: 32px 24px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      align-items: center;
-    }
-    .bullseye h1{
-      font-family: "Comfortaa", cursive;
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: 1.2;
-      margin: 14px 0 10px;
-      color: #fff;
-    }
-    .bullseye p.lead{
-      font-size: 18px;
-      line-height: 1.7;
-      margin: 10px 0 18px;
-      color: #f4fff5;
-    }
-    .bullseye .cta-col{
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 560px;
-      padding-right: 40px;
-    }
-    .bullseye .shutter{
-      width: 56px;
-      height: 56px;
-      object-fit: contain;
-      display: block;
-    }
-    .btn.light{
-      background: #faf3dd; /* light yellow used site-wide */
-      color: #111;
-      border: 1px solid rgba(0,0,0,.05);
-      box-shadow: 0 1px 0 rgba(0,0,0,.04);
-      padding: 12px 24px;
-      text-align: center;
-      align-self: start;
-    }
-    .btn.light:hover{ filter: brightness(0.98); }
-    .btn.link{
-      background: transparent;
-      color: #ffffff;
-      text-decoration: underline;
-      padding: 0;
-      border-radius: 0;
-      display: inline-block;
-      width: fit-content;
-    }
-    .btn.link:hover{ text-decoration-thickness: 2px; }
-    .bullseye .product{
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 14px;
-    }
-    @media (max-width: 860px){
-      .bullseye{
-        min-height: auto; /* allow content to define height on mobile */
-        padding-top: 64px;
-        padding-bottom: 20px;
-      }
-      .bullseye .inner{
-        grid-template-columns: 1fr;
-        gap: 16px;
-        margin: 0 auto;
-        padding: 20px 18px;
-      }
-      .bullseye .cta-col{ max-width: none; padding-right: 0; }
-      .bullseye .shutter{ display: none; } /* hide shutter on mobile */
-      .visual-col{ order: -1; } /* move product image above text */
-      .bullseye .product{
-        width: 100%;
-        height: auto;
-        max-height: 42vh; /* prevent cut-off */
-        object-fit: contain;
-      }
-    }
-  </style>
+  
   <meta property="og:title" content="Baranded – Free AI Brand Builder" />
   <meta property="og:description" content="Create a brand snapshot and logo concepts in minutes." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.baranded.com/" />
   <meta property="og:image" content="https://www.baranded.com/assets/og-image.jpg" />
+  <style>
+  /* Features Built section layout */
+  .features-built {
+    padding-block: 4rem;
+  }
+
+  .features-built h2 {
+    font-family: "Comfortaa", cursive;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1.5rem;
+    padding: 1.75rem 1.5rem;
+    border-radius: 16px;
+    background: transparent;
+    border: 1.5px solid #239b35;
+    box-shadow: none;
+  }
+
+  .feature-text {
+    flex: 1 1 0;
+  }
+
+  .feature-text h3 {
+    font-family: "Comfortaa", cursive;
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .feature-text p {
+    margin: 0;
+    line-height: 1.7;
+    color: #4b5563;
+  }
+
+  .feature-image {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .feature-image img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    height: auto;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(15,23,42,0.15);
+  }
+
+  @media (max-width: 800px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+    .feature-image img {
+      max-width: 100%;
+    }
+    section.wrap,
+    .wrap,
+    .features-built,
+    .branding-made-personal .inner,
+    .built-by,
+    .faq-section {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  /* --- Branding Made Personal Section --- */
+  .branding-made-personal {
+    background: #09120b;
+    color: #ffffff;
+    padding: 5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .branding-made-personal h2 {
+    font-family: "Comfortaa", cursive;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .branding-made-personal .intro {
+    max-width: 650px;
+    line-height: 1.7;
+    color: #e5e7eb;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+  }
+
+  .branding-made-personal .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .branding-made-personal .step {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: left;
+  }
+
+  .branding-made-personal .step-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    opacity: 0.95;
+  }
+
+  .branding-made-personal h3 {
+    font-family: "Comfortaa", cursive;
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    color: #ffffff;
+  }
+
+  .branding-made-personal p {
+    margin: 0;
+    color: #d1d5db;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 800px) {
+    .branding-made-personal .steps {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* Built By Section */
+.built-by {
+  padding: 5rem 0;
+}
+
+.built-inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.built-image img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  object-fit: cover;
+}
+
+.built-text {
+  flex: 1 1 360px;
+  font-size: 1.5rem;
+  line-height: 1.65;
+  color: #111;
+  font-family: 'Comfortaa';
+}
+
+.built-text strong {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 800px) {
+  .built-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .built-text {
+    font-size: 1.2rem;
+  }
+  .built-image img {
+    max-width: 100%;
+  }
+  .built-by,
+  section.faq-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  section.built-by {
+    padding-bottom: 10px;
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 0;
+}
+
+.faq-section h2 {
+  font-family: "Comfortaa", cursive;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem 2.5rem;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 1.4rem 1.35rem;
+  box-shadow: 0 4px 14px rgba(15,23,42,0.04);
+}
+
+.faq-item h3 {
+  margin: 0 0 0.35rem;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.05rem;
+  color: #111827;
+}
+
+.faq-item p {
+  margin: 0;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+@media (max-width: 800px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
 </head>
 <body>
   <!-- Topbar -->
@@ -151,32 +295,144 @@
     </div>
   </section>
 
-  <!-- Features -->
-  <section id="features" class="wrap grid">
-    <article class="card">
-      <h3>Brand Snapshot</h3>
-      <p>Mission, values, tone—summarized into a clear, shareable doc.</p>
-    </article>
-    <article class="card">
-      <h3>Logo Concepts</h3>
-      <p>Quick icon exploration + text lockups with webfont previews.</p>
-    </article>
-    <article class="card">
-      <h3>Color & Type</h3>
-      <p>Accessible palette and font pairing suggestions.</p>
-    </article>
+  <!-- Features Section -->
+  <section class="features-built wrap">
+    <h2>Features built for real brands</h2>
+    <div class="features-grid">
+      <!-- Card 1: image left, text right -->
+      <article class="feature-card">
+        <div class="feature-image">
+          <img src="/assets/macbook-pro-questionnaire.jpg" alt="Guided Questions on laptop">
+        </div>
+        <div class="feature-text">
+          <h3>Guided Questions</h3>
+          <p>No more staring at a blank page — step-by-step prompts help you clarify your mission, audience, and style.</p>
+        </div>
+      </article>
+
+      <!-- Card 2: image left, text right -->
+      <article class="feature-card">
+        <div class="feature-image">
+          <img src="/assets/phone-in-hand.jpg" alt="Quick and accessible on phone">
+        </div>
+        <div class="feature-text">
+          <h3>Quick & Accessible</h3>
+          <p>Build a brand in minutes — no expensive workshops or waiting months for a professional.</p>
+        </div>
+      </article>
+
+      <!-- Card 3: image left, text right -->
+      <article class="feature-card">
+        <div class="feature-image">
+          <img src="/assets/ipad-type.jpg" alt="Actionable Results on tablet">
+        </div>
+        <div class="feature-text">
+          <h3>Actionable Results</h3>
+          <p>Receive a structured brand identity you can use for your website, marketing, or design projects.</p>
+        </div>
+      </article>
+    </div>
   </section>
 
-  <!-- How it works -->
-  <section id="how-it-works" class="wrap steps">
-    <h2>How it works</h2>
-    <ol>
-      <li>Take the short questionnaire</li>
-      <li>Review your brand snapshot</li>
-      <li>Generate logo options and refine</li>
-      <li>Download assets and share</li>
-    </ol>
-    <a class="btn primary" href="https://app.baranded.com/questionnaire.html">Try it now</a>
+
+  <section class="branding-made-personal">
+    <div class="inner wrap" style="display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap;">
+      <div class="bmp-left" style="flex:1 1 320px;max-width:520px;">
+        <h2>Branding, made personal and powerful</h2>
+        <p class="intro">
+          Ditch the cookie-cutter look. Our AI-powered tools help you craft a brand identity that’s uniquely yours—fast, easy, and never generic. Stand out, stay true, and launch with confidence.
+        </p>
+      </div>
+
+      <div class="bmp-right" style="flex:1 1 260px;">
+        <ol class="bmp-list" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:1.8rem;">
+          <li style="display:flex; align-items:flex-start; gap:1rem;">
+            <span style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:2px solid var(--primary);border-radius:50%;font-weight:600;font-size:1rem;">1</span>
+            <div>
+              <h3 style="margin:0 0 0.25rem;font-family:'Comfortaa',cursive;color:#fff;">Create your account</h3>
+              <p style="margin:0;color:#d1d5db;">It’s quick and easy — start building your brand in minutes.</p>
+            </div>
+          </li>
+
+          <li style="display:flex; align-items:flex-start; gap:1rem;">
+            <span style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:2px solid var(--primary);border-radius:50%;font-weight:600;font-size:1rem;">2</span>
+            <div>
+              <h3 style="margin:0 0 0.25rem;font-family:'Comfortaa',cursive;color:#fff;">Answer guided questions</h3>
+              <p style="margin:0;color:#d1d5db;">The same process brand professionals use, simplified.</p>
+            </div>
+          </li>
+
+          <li style="display:flex; align-items:flex-start; gap:1rem;">
+            <span style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:2px solid var(--primary);border-radius:50%;font-weight:600;font-size:1rem;">3</span>
+            <div>
+              <h3 style="margin:0 0 0.25rem;font-family:'Comfortaa',cursive;color:#fff;">Get your brand snapshot</h3>
+              <p style="margin:0;color:#d1d5db;">Instantly receive your logo, colors, and fonts — ready to use.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div style="width:100%; text-align:center; margin-top:3rem;">
+  <a href="https://app.baranded.com/signup.html"
+     class="btn primary"
+     style="display:inline-block; padding:14px 26px; border-radius:12px; color:#fff; font-weight:600; text-decoration:none; font-family:'Didact Gothic', sans-serif;">
+    Start Your Brand
+  </a>
+</div>
+  </section>
+
+    <!-- Built by a Brand Strategist -->
+  <section class="built-by wrap">
+    <div class="built-inner">
+      
+      <div class="built-image">
+        <img src="/assets/business-owner.jpg" alt="Business Owner">
+      </div>
+
+      <div class="built-text">
+        <p>
+            Built by a brand strategist who has worked with entrepreneurs, small businesses,
+            and creative professionals to develop meaningful, lasting brands. This tool is inspired by real workshop methods — now made accessible to everyone.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq-section wrap">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-grid">
+      <article class="faq-item">
+        <h3>How does it work?</h3>
+        <p>You answer a series of guided questions. AI is there to help along the way and then generates a brand identity snapshot tailored to your answers.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>What do I get at the end?</h3>
+        <p>A structured summary of your brand’s mission, audience, values, differentiation, tone, and visual direction — clear enough to guide your next steps.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>Do I need design or branding experience?</h3>
+        <p>Not at all. The tool is built for entrepreneurs, freelancers, and small business owners who want clarity without hiring a full branding team.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>How long does it take?</h3>
+        <p>You can complete the entire process in a couple minutes, but the more you put in the more you will get out. You can move at your own pace and come back anytime.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>Is my information private?</h3>
+        <p>Yes. Your responses are yours alone — we don’t share or sell your data.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>Can I update my answers later?</h3>
+        <p>Absolutely. You can revisit questions, refine your answers, and generate an updated brand snapshot if anything changes!</p>
+      </article>
+    </div>
   </section>
 
   <!-- Footer -->

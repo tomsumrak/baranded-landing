@@ -16,15 +16,129 @@ body{
 /* Topbar */
 .topbar{
   position:sticky; top:0; z-index:1000;
-  height:64px; background:#fff; border-bottom:1px solid var(--border);
+  height:64px; background: #faf3dd;
+; border-bottom:1px solid var(--border);
   display:flex; align-items:center; justify-content:space-between; padding:0 20px;
 }
 .topbar .nav{ display:flex; gap:16px; align-items:center; }
 .topbar .nav a{ text-decoration:none; color:#111; padding:6px 8px; border-radius:8px; }
 .topbar .nav a:hover{ background:var(--primary-ghost); }
 .topbar .nav .cta{ background:var(--primary); color:#fff; font-weight:700; }
+.topbar .nav .cta:hover{
+  filter: brightness(0.9);
+}
 .hamburger{ display:none; background:transparent; border:none; font-size:22px; padding:8px; cursor:pointer; }
 .logo img{ display:block; height:28px; }
+
+.btn.primary:hover {
+  background: #197727;
+}
+
+    /* Bullseye hero */
+    .bullseye{
+      background: var(--primary);
+      color: #fff;
+      /* Sit directly under fixed topbar and center content vertically */
+      padding-top: 40px; /* equals topbar height */
+      padding-bottom: 40px;
+      min-height: 700px; /* larger hero on desktop */
+      display: flex;
+      align-items: center;
+    }
+    .bullseye .inner{
+      max-width: 1200px;
+      margin: 0 auto; /* remove extra gap; top padding handled by .bullseye */
+      padding: 32px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .bullseye h1{
+      font-family: "Comfortaa", cursive;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.2;
+      margin: 14px 0 10px;
+      color: #fff;
+    }
+    .bullseye p.lead{
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 10px 0 18px;
+      color: #f4fff5;
+    }
+    .bullseye .cta-col{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 560px;
+      padding-right: 40px;
+    }
+    .bullseye .shutter{
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      display: block;
+    }
+    .btn.light{
+      background: #faf3dd; /* light yellow used site-wide */
+      color: #111;
+      border: 1px solid rgba(0,0,0,.05);
+      box-shadow: 0 1px 0 rgba(0,0,0,.04);
+      padding: 12px 24px;
+      text-align: center;
+      align-self: start;
+    }
+    .btn.light:hover{
+      background: #fae398;
+      cursor: pointer;
+    }
+    .btn.link{
+      background: transparent;
+      color: #ffffff;
+      text-decoration: underline;
+      padding: 0;
+      border-radius: 0;
+      display: inline-block;
+      width: fit-content;
+    }
+    .btn.link:hover{ text-decoration-thickness: 2px; }
+    .bullseye .product{
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+    }
+
+    @media (max-width: 800px){
+      .bullseye{
+        min-height: auto; /* allow content to define height on mobile */
+        padding-top: 64px;
+        padding-bottom: 20px;
+        text-align: center;
+      }
+      .bullseye .inner{
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 0 auto;
+        padding: 20px 18px;
+      }
+      .bullseye .cta-col{ max-width: none; padding-right: 0; }
+      .bullseye .shutter{ display: none; } /* hide shutter on mobile */
+      .visual-col{ order: -1; } /* move product image above text */
+      .bullseye .product{
+        width: 100%;
+        height: auto;
+        max-height: 42vh; /* prevent cut-off */
+        object-fit: contain;
+      }
+      .btn.light {
+        align-self: auto;
+      }
+      .btn.link {
+        width: auto;;
+      }
+    }
 
 /* Drawer (mobile menu) */
 .drawer{
@@ -39,7 +153,7 @@ body{
 .drawer.open{ transform:translateX(0); }
 
 /* Layout */
-.wrap{ max-width:1100px; margin:32px auto; padding:0 20px; }
+.wrap{ max-width:1200px; margin:32px auto; padding:0 20px; }
 .hero{ display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; margin-top:40px; }
 .hero h1{ font-family:"Comfortaa",cursive; font-size:44px; margin:0 0 6px; color:var(--primary); }
 .lead{ font-size:18px; color:#111; }
