@@ -17,6 +17,10 @@
   <meta property="og:url" content="https://www.baranded.com/" />
   <meta property="og:image" content="https://www.baranded.com/assets/og-image.jpg" />
   <style>
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   /* Features Built section layout */
   .features-built {
     padding-block: 4rem;
@@ -96,6 +100,19 @@
   }
 
   /* --- Branding Made Personal Section --- */
+  .bmp-list-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    aspect-ratio: 1 / 1;
+    border-radius: 999px;
+    border: 2px solid var(--primary);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
   .branding-made-personal {
     background: #09120b;
     color: #ffffff;
@@ -254,6 +271,70 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* New Footer Styles */
+.site-footer {
+  background: #111;
+  color: #eee;
+  padding: 2rem 1.5rem;
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-logo {
+  font-family: "Comfortaa", cursive;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.footer-logo img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.footer-nav a {
+  color: #ccc;
+  margin-left: 1.2rem;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-left: 0;
+  }
+  .footer-nav a {
+    margin-left: 0;
+  }
+}
   </style>
 </head>
 <body>
@@ -347,7 +428,7 @@
       <div class="bmp-right" style="flex:1 1 260px;">
         <ol class="bmp-list" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:1.8rem;">
           <li style="display:flex; align-items:flex-start; gap:1rem;">
-            <span style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:2px solid var(--primary);border-radius:50%;font-weight:600;font-size:1rem;">1</span>
+            <span class="bmp-list-number">1</span>
             <div>
               <h3 style="margin:0 0 0.25rem;font-family:'Comfortaa',cursive;color:#fff;">Create your account</h3>
               <p style="margin:0;color:#d1d5db;">It’s quick and easy — start building your brand in minutes.</p>
@@ -355,7 +436,7 @@
           </li>
 
           <li style="display:flex; align-items:flex-start; gap:1rem;">
-            <span style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:2px solid var(--primary);border-radius:50%;font-weight:600;font-size:1rem;">2</span>
+            <span class="bmp-list-number">2</span>
             <div>
               <h3 style="margin:0 0 0.25rem;font-family:'Comfortaa',cursive;color:#fff;">Answer guided questions</h3>
               <p style="margin:0;color:#d1d5db;">The same process brand professionals use, simplified.</p>
@@ -363,7 +444,7 @@
           </li>
 
           <li style="display:flex; align-items:flex-start; gap:1rem;">
-            <span style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:2px solid var(--primary);border-radius:50%;font-weight:600;font-size:1rem;">3</span>
+            <span class="bmp-list-number">3</span>
             <div>
               <h3 style="margin:0 0 0.25rem;font-family:'Comfortaa',cursive;color:#fff;">Get your brand snapshot</h3>
               <p style="margin:0;color:#d1d5db;">Instantly receive your logo, colors, and fonts — ready to use.</p>
@@ -438,18 +519,24 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
-      <img src="/assets/white-green-horizontal-logo.webp" alt="Baranded" height="28">
-      <nav>
-        <a href="https://app.baranded.com/privacy.html">Privacy</a>
-        <a href="https://app.baranded.com/terms.html">Terms</a>
-        <a href="https://donate.stripe.com/00w4gBaUK7y2bF4a7p9ws00" rel="noopener">Donate</a>
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="/assets/white-green-horizontal-logo.webp" alt="Baranded logo">
+        </div>
+        <p>© <span id="year">2025</span> Baranded. All rights reserved.</p>
+      </div>
+
+      <nav class="footer-nav">
+        <a href="https://app.baranded.com/privacy.html">Privacy Policy</a>
+        <a href="https://app.baranded.com/terms.html">Terms of Use</a>
+        <a href="https://app.baranded.com/questionnaire.html">Questionnaire</a>
+        <a href="https://app.baranded.com/dashboard.html">Dashboard</a>
       </nav>
-      <span>© <span id="y"></span> Baranded</span>
     </div>
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
     const drawer = document.getElementById('drawer');
     const hamb = document.querySelector('.hamburger');
     hamb.addEventListener('click', ()=> drawer.classList.toggle('open'));
