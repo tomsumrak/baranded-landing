@@ -1,547 +1,512 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
+      <meta charset="utf-8" />
   <title>Baranded – Free AI Brand Builder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Generate a brand snapshot, logo concepts, colors, and type—free. Then refine in the Baranded app." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#239b35">
+  <link rel="canonical" href="https://www.baranded.com/" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&family=Didact+Gothic&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/styles.css">
-  
-  <meta property="og:title" content="Baranded – Free AI Brand Builder" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Baranded – Free AI Brand Builder" />
+  <meta property="twitter:description" content="Generate a brand snapshot, logo concepts, colors, and type—free. Then refine in the Baranded app." />
+  <meta property="twitter:image" content="https://www.baranded.com/assets/og-image.jpg" />
+
+   <meta property="og:title" content="Baranded – Free AI Brand Builder" />
   <meta property="og:description" content="Create a brand snapshot and logo concepts in minutes." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.baranded.com/" />
   <meta property="og:image" content="https://www.baranded.com/assets/og-image.jpg" />
-  <style>
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  /* Features Built section layout */
-  .features-built {
-    padding-block: 4rem;
-  }
 
-  .features-built h2 {
-    font-family: "Comfortaa", cursive;
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
-  }
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&family=Didact+Gothic&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/favicon.png">
+    
+    <!-- Google Fonts: Plus Jakarta Sans (Modern, Geometric SaaS font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-
-  .feature-card {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: 1.5rem;
-    padding: 1.75rem 1.5rem;
-    border-radius: 16px;
-    background: transparent;
-    border: 1.5px solid #239b35;
-    box-shadow: none;
-  }
-
-  .feature-text {
-    flex: 1 1 0;
-  }
-
-  .feature-text h3 {
-    font-family: "Comfortaa", cursive;
-    font-size: 1.25rem;
-    margin: 0 0 0.5rem;
-  }
-
-  .feature-text p {
-    margin: 0;
-    line-height: 1.7;
-    color: #4b5563;
-  }
-
-  .feature-image {
-    flex: 0 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-
-  .feature-image img {
-    max-width: 100%;
-    margin-bottom: 1rem;
-    height: auto;
-    border-radius: 14px;
-    object-fit: cover;
-    box-shadow: 0 10px 30px rgba(15,23,42,0.15);
-  }
-
-  @media (max-width: 800px) {
-    .features-grid {
-      grid-template-columns: 1fr;
-    }
-    .feature-image img {
-      max-width: 100%;
-    }
-    section.wrap,
-    .wrap,
-    .features-built,
-    .branding-made-personal .inner,
-    .built-by,
-    .faq-section {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-  }
-
-  /* --- Branding Made Personal Section --- */
-  .bmp-list-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    aspect-ratio: 1 / 1;
-    border-radius: 999px;
-    border: 2px solid var(--primary);
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1;
-    flex-shrink: 0;
-  }
-  .branding-made-personal {
-    background: #09120b;
-    color: #ffffff;
-    padding: 5rem 0;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .branding-made-personal h2 {
-    font-family: "Comfortaa", cursive;
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .branding-made-personal .intro {
-    max-width: 650px;
-    line-height: 1.7;
-    color: #e5e7eb;
-    margin-bottom: 3rem;
-    font-size: 1.1rem;
-  }
-
-  .branding-made-personal .steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-
-  .branding-made-personal .step {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 2rem;
-    border-radius: 16px;
-    text-align: left;
-  }
-
-  .branding-made-personal .step-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 1rem;
-    opacity: 0.95;
-  }
-
-  .branding-made-personal h3 {
-    font-family: "Comfortaa", cursive;
-    margin: 0 0 0.5rem;
-    font-size: 1.25rem;
-    color: #ffffff;
-  }
-
-  .branding-made-personal p {
-    margin: 0;
-    color: #d1d5db;
-    line-height: 1.6;
-  }
-
-  @media (max-width: 800px) {
-    .branding-made-personal .steps {
-      grid-template-columns: 1fr;
-    }
-  }
-  /* Built By Section */
-.built-by {
-  padding: 5rem 0;
-}
-
-.built-inner {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-
-.built-image img {
-  width: 100%;
-  max-width: 460px;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-  object-fit: cover;
-}
-
-.built-text {
-  flex: 1 1 360px;
-  font-size: 1.5rem;
-  line-height: 1.65;
-  color: #111;
-  font-family: 'Comfortaa';
-}
-
-.built-text strong {
-  display: block;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 800px) {
-  .built-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-  .built-text {
-    font-size: 1.2rem;
-  }
-  .built-image img {
-    max-width: 100%;
-  }
-  .built-by,
-  section.faq-section {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  section.built-by {
-    padding-bottom: 10px;
-  }
-}
-
-/* FAQ Section */
-.faq-section {
-  padding: 0;
-}
-
-.faq-section h2 {
-  font-family: "Comfortaa", cursive;
-  font-size: 2rem;
-  margin-bottom: 2.5rem;
-}
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.75rem 2.5rem;
-}
-
-.faq-item {
-  background: #fff;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  padding: 1.4rem 1.35rem;
-  box-shadow: 0 4px 14px rgba(15,23,42,0.04);
-}
-
-.faq-item h3 {
-  margin: 0 0 0.35rem;
-  font-family: "Comfortaa", cursive;
-  font-size: 1.05rem;
-  color: #111827;
-}
-
-.faq-item p {
-  margin: 0;
-  line-height: 1.7;
-  color: #4b5563;
-}
-
-@media (max-width: 800px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* New Footer Styles */
-.site-footer {
-  background: #111;
-  color: #eee;
-  padding: 2rem 1.5rem;
-  font-family: "Didact Gothic", sans-serif;
-  font-size: 0.9rem;
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.footer-logo {
-  font-family: "Comfortaa", cursive;
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: #fff;
-}
-
-.footer-logo img {
-  height: 28px;
-  width: auto;
-  display: block;
-}
-
-.footer-nav a {
-  color: #ccc;
-  margin-left: 1.2rem;
-  text-decoration: none;
-}
-
-.footer-nav a:hover {
-  color: #fff;
-}
-
-@media (max-width: 800px) {
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-left: 0;
-  }
-  .footer-nav a {
-    margin-left: 0;
-  }
-}
-  </style>
-</head>
-<body>
-  <!-- Topbar -->
-  <header class="topbar">
-    <a class="logo" href="/">
-      <img src="/assets/black-green.webp" alt="Baranded" height="28">
-    </a>
-    <a class="btn primary" href="https://app.baranded.com/login.html">Get Started</a>
-    <button class="hamburger" aria-label="Open menu">☰</button>
-  </header>
-
-  <!-- Mobile menu -->
-  <aside class="drawer" id="drawer">
-    <a href="#features" onclick="closeDrawer()">Features</a>
-    <a href="#how-it-works" onclick="closeDrawer()">How it works</a>
-    <a class="cta" href="https://app.baranded.com">Open App</a>
-  </aside>
-
-  <!-- Bullseye Hero -->
-  <section class="bullseye">
-    <div class="inner">
-      <!-- Left: shutter, headline, copy, CTAs -->
-      <div class="cta-col">
-        <img class="shutter" src="/assets/shutter-icon.png" alt="Shutter icon">
-        <h1>Build Your Brand Identity With Confidence.</h1>
-        <p class="lead">
-          An interactive AI-powered guide that takes you through the essential questions,
-          uncovers insights, and delivers a clear brand identity snapshot you can actually use.
-        </p>
-        <a class="btn light" href="https://app.baranded.com/signup.html">Sign Up</a>
-        <a class="btn link" href="https://app.baranded.com/login.html" aria-label="Login for current users">Login for current users</a>
-      </div>
-
-      <!-- Right: product image -->
-      <div class="visual-col">
-        <img class="product" src="/assets/product-display.png" alt="Baranded product preview">
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="features-built wrap">
-    <h2>Features built for real brands</h2>
-    <div class="features-grid">
-      <!-- Card 1: image left, text right -->
-      <article class="feature-card">
-        <div class="feature-image">
-          <img src="/assets/macbook-pro-questionnaire.jpg" alt="Guided Questions on laptop">
-        </div>
-        <div class="feature-text">
-          <h3>Guided Questions</h3>
-          <p>No more staring at a blank page — step-by-step prompts help you clarify your mission, audience, and style.</p>
-        </div>
-      </article>
-
-      <!-- Card 2: image left, text right -->
-      <article class="feature-card">
-        <div class="feature-image">
-          <img src="/assets/phone-in-hand.jpg" alt="Quick and accessible on phone">
-        </div>
-        <div class="feature-text">
-          <h3>Quick & Accessible</h3>
-          <p>Build a brand in minutes — no expensive workshops or waiting months for a professional.</p>
-        </div>
-      </article>
-
-      <!-- Card 3: image left, text right -->
-      <article class="feature-card">
-        <div class="feature-image">
-          <img src="/assets/ipad-type.jpg" alt="Actionable Results on tablet">
-        </div>
-        <div class="feature-text">
-          <h3>Actionable Results</h3>
-          <p>Receive a structured brand identity you can use for your website, marketing, or design projects.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-
-  <section class="branding-made-personal">
-    <div class="inner wrap" style="display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap;">
-      <div class="bmp-left" style="flex:1 1 320px;max-width:520px;">
-        <h2>Branding, made personal and powerful</h2>
-        <p class="intro">
-          Ditch the cookie-cutter look. Our AI-powered tools help you craft a brand identity that’s uniquely yours—fast, easy, and never generic. Stand out, stay true, and launch with confidence.
-        </p>
-      </div>
-
-      <div class="bmp-right" style="flex:1 1 260px;">
-        <ol class="bmp-list" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:1.8rem;">
-          <li style="display:flex; align-items:flex-start; gap:1rem;">
-            <span class="bmp-list-number">1</span>
-            <div>
-              <h3 style="margin:0 0 0.25rem;font-family:'Comfortaa',cursive;color:#fff;">Create your account</h3>
-              <p style="margin:0;color:#d1d5db;">It’s quick and easy — start building your brand in minutes.</p>
-            </div>
-          </li>
-
-          <li style="display:flex; align-items:flex-start; gap:1rem;">
-            <span class="bmp-list-number">2</span>
-            <div>
-              <h3 style="margin:0 0 0.25rem;font-family:'Comfortaa',cursive;color:#fff;">Answer guided questions</h3>
-              <p style="margin:0;color:#d1d5db;">The same process brand professionals use, simplified.</p>
-            </div>
-          </li>
-
-          <li style="display:flex; align-items:flex-start; gap:1rem;">
-            <span class="bmp-list-number">3</span>
-            <div>
-              <h3 style="margin:0 0 0.25rem;font-family:'Comfortaa',cursive;color:#fff;">Get your brand snapshot</h3>
-              <p style="margin:0;color:#d1d5db;">Instantly receive your logo, colors, and fonts — ready to use.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-    <div style="width:100%; text-align:center; margin-top:3rem;">
-  <a href="https://app.baranded.com/signup.html"
-     class="btn primary"
-     style="display:inline-block; padding:14px 26px; border-radius:12px; color:#fff; font-weight:600; text-decoration:none; font-family:'Didact Gothic', sans-serif;">
-    Start Your Brand
-  </a>
-</div>
-  </section>
-
-    <!-- Built by a Brand Strategist -->
-  <section class="built-by wrap">
-    <div class="built-inner">
-      
-      <div class="built-image">
-        <img src="/assets/business-owner.jpg" alt="Business Owner">
-      </div>
-
-      <div class="built-text">
-        <p>
-            Built by a brand strategist who has worked with entrepreneurs, small businesses,
-            and creative professionals to develop meaningful, lasting brands. This tool is inspired by real workshop methods — now made accessible to everyone.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="faq-section wrap">
-    <h2>Frequently asked questions</h2>
-    <div class="faq-grid">
-      <article class="faq-item">
-        <h3>How does it work?</h3>
-        <p>You answer a series of guided questions. AI is there to help along the way and then generates a brand identity snapshot tailored to your answers.</p>
-      </article>
-
-      <article class="faq-item">
-        <h3>What do I get at the end?</h3>
-        <p>A structured summary of your brand’s mission, audience, values, differentiation, tone, and visual direction — clear enough to guide your next steps.</p>
-      </article>
-
-      <article class="faq-item">
-        <h3>Do I need design or branding experience?</h3>
-        <p>Not at all. The tool is built for entrepreneurs, freelancers, and small business owners who want clarity without hiring a full branding team.</p>
-      </article>
-
-      <article class="faq-item">
-        <h3>How long does it take?</h3>
-        <p>You can complete the entire process in a couple minutes, but the more you put in the more you will get out. You can move at your own pace and come back anytime.</p>
-      </article>
-
-      <article class="faq-item">
-        <h3>Is my information private?</h3>
-        <p>Yes. Your responses are yours alone — we don’t share or sell your data.</p>
-      </article>
-
-      <article class="faq-item">
-        <h3>Can I update my answers later?</h3>
-        <p>Absolutely. You can revisit questions, refine your answers, and generate an updated brand snapshot if anything changes!</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-left">
-        <div class="footer-logo">
-          <img src="/assets/white-green-horizontal-logo.webp" alt="Baranded logo">
-        </div>
-        <p>© <span id="year">2025</span> Baranded. All rights reserved.</p>
-      </div>
-
-      <nav class="footer-nav">
-        <a href="https://app.baranded.com/privacy.html">Privacy Policy</a>
-        <a href="https://app.baranded.com/terms.html">Terms of Use</a>
-        <a href="https://app.baranded.com/questionnaire.html">Questionnaire</a>
-        <a href="https://app.baranded.com/dashboard.html">Dashboard</a>
-      </nav>
-    </div>
-  </footer>
-
+      <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5MEQJ2Q7Y"></script>
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const drawer = document.getElementById('drawer');
-    const hamb = document.querySelector('.hamburger');
-    hamb.addEventListener('click', ()=> drawer.classList.toggle('open'));
-    function closeDrawer(){ drawer.classList.remove('open'); }
-    window.closeDrawer = closeDrawer;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-D5MEQJ2Q7Y');
   </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Baranded",
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "An interactive AI-powered guide that helps you build a brand identity, including logo concepts, colors, and typography.",
+      "author": {
+        "@type": "Organization",
+        "name": "Baranded",
+        "url": "https://www.baranded.com"
+      }
+    }
+  </script>
+
+    <!-- Custom Config for Brand Colors -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e', // Original Primaryish
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16',
+                        },
+                        accent: {
+                            400: '#a3e635', // Electric Lime
+                            500: '#84cc16',
+                        },
+                        dark: {
+                            900: '#0a0a0a', // Deep Void
+                            800: '#171717',
+                            700: '#262626',
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-glow': 'radial-gradient(circle at center, rgba(34, 197, 94, 0.15) 0%, rgba(10, 10, 10, 0) 70%)',
+                        'card-gradient': 'linear-gradient(145deg, rgba(23, 23, 23, 1) 0%, rgba(10, 10, 10, 1) 100%)',
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #22c55e;
+        }
+        
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-slate-200 antialiased selection:bg-brand-500 selection:text-white overflow-x-hidden">
+
+    <!-- Background Ambient Glow -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-500/20 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob"></div>
+        <div class="absolute top-[-10%] right-[-10%] w-96 h-96 bg-accent-400/10 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-[500px] h-[500px] bg-brand-600/10 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white font-bold text-xl shadow-[0_0_15px_rgba(34,197,94,0.5)]">
+                        B
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-white">Baranded</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Features</a>
+                    <a href="#how-it-works" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">How it Works</a>
+                    <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">FAQ</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://app.baranded.com/login" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Login</a>
+                    <a href="https://app.baranded.com/signup" class="px-5 py-2.5 rounded-full bg-white text-dark-900 text-sm font-bold hover:bg-brand-400 hover:text-dark-900 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(74,222,128,0.4)]">
+                        Start Free
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-900 border-b border-white/5">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#features" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md">Features</a>
+                <a href="#how-it-works" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md">How it Works</a>
+                <a href="#faq" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md">FAQ</a>
+                <div class="mt-4 pt-4 border-t border-white/10 flex flex-col gap-3">
+                    <a href="#" class="block text-center text-slate-300 hover:text-white font-medium">Login</a>
+                    <a href="#" class="block text-center px-5 py-3 rounded-lg bg-brand-500 text-white font-bold hover:bg-brand-400 transition-colors">Start Free</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative z-10 pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-300 text-xs font-semibold uppercase tracking-wider mb-8 animate-fade-in opacity-0">
+                <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                AI-Powered Brand Builder
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 leading-[1.1] animate-slide-up opacity-0" style="animation-delay: 0.1s;">
+                Build Your Brand Identity <br class="hidden md:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-accent-400 text-glow">With Confidence.</span>
+            </h1>
+
+            <!-- Subheading -->
+            <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-slate-400 animate-slide-up opacity-0" style="animation-delay: 0.2s;">
+                Ditch the cookie-cutter look. Our interactive AI guide helps you uncover insights and deliver a clear, structured brand identity snapshot in minutes.
+            </p>
+
+            <!-- CTA Group -->
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4 animate-slide-up opacity-0" style="animation-delay: 0.3s;">
+                <a href="https://app.baranded.com/signup" class="group relative px-8 py-4 bg-brand-500 hover:bg-brand-400 text-dark-900 font-bold rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:shadow-[0_0_50px_rgba(34,197,94,0.5)] overflow-hidden">
+                    <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                    <span class="relative flex items-center gap-2">
+                        Start Building Free
+                        <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                    </span>
+                </a>
+                <a href="#how-it-works" class="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-lg transition-all hover:border-white/30 backdrop-blur-sm">
+                    How it Works
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features Bento Grid -->
+    <section id="features" class="relative z-10 py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Features built for <span class="text-brand-400">real brands</span></h2>
+                <p class="text-slate-400 max-w-xl mx-auto">No more staring at a blank page. We simplified the branding process used by professionals.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Guided Questions (Span 2 cols on tablet/desktop) -->
+                <div class="md:col-span-2 group relative p-8 rounded-3xl bg-card-gradient border border-white/5 hover:border-brand-500/30 transition-all duration-500 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500/10 rounded-full blur-[80px] -mr-32 -mt-32 transition-opacity group-hover:opacity-100"></div>
+                    
+                    <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-6">
+                        <div class="p-4 rounded-2xl bg-brand-500/10 text-brand-400 ring-1 ring-brand-500/20 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="message-square-dashed" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Guided Questions</h3>
+                            <p class="text-slate-400 leading-relaxed">Step-by-step prompts help you clarify your mission, audience, and style. It's like having a brand strategist in your pocket.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Quick -->
+                <div class="group relative p-8 rounded-3xl bg-card-gradient border border-white/5 hover:border-brand-500/30 transition-all duration-500">
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-500 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div class="mb-6 p-3 w-fit rounded-xl bg-accent-400/10 text-accent-400 ring-1 ring-accent-400/20">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Quick & Accessible</h3>
+                    <p class="text-slate-400 text-sm">Build a brand in minutes, not months. No expensive workshops required.</p>
+                </div>
+
+                <!-- Card 3: Actionable Results -->
+                <div class="group relative p-8 rounded-3xl bg-card-gradient border border-white/5 hover:border-brand-500/30 transition-all duration-500">
+                    <div class="absolute top-0 right-0 p-8 opacity-20">
+                        <i data-lucide="file-check" class="w-24 h-24 text-white rotate-12"></i>
+                    </div>
+                    <div class="mb-6 p-3 w-fit rounded-xl bg-blue-500/10 text-blue-400 ring-1 ring-blue-500/20">
+                        <i data-lucide="layout-template" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Actionable Results</h3>
+                    <p class="text-slate-400 text-sm">Receive a structured brand identity snapshot you can actually use for your website and marketing.</p>
+                </div>
+
+                <!-- Card 4: Privacy (Span 2 cols) -->
+                <div class="md:col-span-2 group relative p-8 rounded-3xl bg-card-gradient border border-white/5 hover:border-brand-500/30 transition-all duration-500">
+                     <div class="relative z-10 flex flex-col md:flex-row items-center gap-6">
+                         <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white mb-2">Private & Secure</h3>
+                            <p class="text-slate-400 text-sm mb-4">Your brand ideas are yours alone. We don't share or sell your data.</p>
+                            <a href="https://app.baranded.com/privacy" class="text-brand-400 font-semibold text-sm hover:text-brand-300 flex items-center gap-1">
+                                Read Privacy Policy <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                            <div class="flex items-center gap-3 text-sm text-slate-300">
+                                <i data-lucide="lock" class="w-4 h-4 text-brand-500"></i>
+                                <span>Encrypted Data</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-slate-300 mt-2">
+                                <i data-lucide="user-check" class="w-4 h-4 text-brand-500"></i>
+                                <span>No third-party sharing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Timeline -->
+    <section id="how-it-works" class="relative z-10 py-24 bg-dark-800 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">From Idea to Identity in <span class="text-brand-400">3 Steps</span></h2>
+            </div>
+
+            <div class="relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-brand-500/30 to-transparent -translate-y-1/2 z-0"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+                    
+                    <!-- Step 1 -->
+                    <div class="group text-center">
+                        <div class="w-20 h-20 mx-auto bg-dark-900 border-2 border-brand-500/30 rounded-2xl flex items-center justify-center text-2xl font-bold text-white group-hover:border-brand-500 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300 mb-6 relative">
+                            1
+                            <div class="absolute -bottom-2 -right-2 bg-brand-500 text-dark-900 p-1.5 rounded-lg">
+                                <i data-lucide="user-plus" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Create Account</h3>
+                        <p class="text-slate-400 text-sm">It's quick, free, and easy. Start building in under a minute.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="group text-center">
+                        <div class="w-20 h-20 mx-auto bg-dark-900 border-2 border-brand-500/30 rounded-2xl flex items-center justify-center text-2xl font-bold text-white group-hover:border-brand-500 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300 mb-6 relative">
+                            2
+                            <div class="absolute -bottom-2 -right-2 bg-brand-500 text-dark-900 p-1.5 rounded-lg">
+                                <i data-lucide="pencil-line" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Answer Questions</h3>
+                        <p class="text-slate-400 text-sm">Our AI guides you through key brand pillars: Mission, Audience, & Tone.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="group text-center">
+                        <div class="w-20 h-20 mx-auto bg-dark-900 border-2 border-brand-500/30 rounded-2xl flex items-center justify-center text-2xl font-bold text-white group-hover:border-brand-500 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300 mb-6 relative">
+                            3
+                            <div class="absolute -bottom-2 -right-2 bg-brand-500 text-dark-900 p-1.5 rounded-lg">
+                                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Get Snapshot</h3>
+                        <p class="text-slate-400 text-sm">Instantly receive your brand profile, colors, and direction.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-dark-900">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <!-- Item 1 -->
+                <div class="border border-white/10 rounded-xl overflow-hidden bg-white/5 transition-all duration-300 hover:border-brand-500/30">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center text-slate-200 font-medium focus:outline-none" onclick="toggleFaq(this)">
+                        How does it work?
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400 text-sm border-t border-white/5 pt-4">
+                        You answer a series of guided questions. AI is there to help along the way and then generates a brand identity snapshot tailored to your answers.
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="border border-white/10 rounded-xl overflow-hidden bg-white/5 transition-all duration-300 hover:border-brand-500/30">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center text-slate-200 font-medium focus:outline-none" onclick="toggleFaq(this)">
+                        What do I get at the end?
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400 text-sm border-t border-white/5 pt-4">
+                        A structured summary of your brand's mission, audience, values, differentiation, tone, and visual direction — clear enough to guide your next steps.
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="border border-white/10 rounded-xl overflow-hidden bg-white/5 transition-all duration-300 hover:border-brand-500/30">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center text-slate-200 font-medium focus:outline-none" onclick="toggleFaq(this)">
+                        Do I need design experience?
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400 text-sm border-t border-white/5 pt-4">
+                        Not at all. The tool is built for entrepreneurs, freelancers, and small business owners who want clarity without hiring a full branding team.
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="border border-white/10 rounded-xl overflow-hidden bg-white/5 transition-all duration-300 hover:border-brand-500/30">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center text-slate-200 font-medium focus:outline-none" onclick="toggleFaq(this)">
+                        Is it really free?
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400 text-sm border-t border-white/5 pt-4">
+                        Yes! Baranded is currently free to use to help you get your business off the ground with a solid identity.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-900/20"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to launch your brand?</h2>
+            <p class="text-slate-300 mb-10 text-lg">Join thousands of founders building with confidence.</p>
+            <a href="https://app.baranded.com/signup" class="inline-block px-10 py-5 bg-white text-dark-900 font-bold text-lg rounded-full hover:bg-brand-400 transition-all duration-300 transform hover:scale-105 shadow-[0_0_40px_rgba(255,255,255,0.2)]">
+                Get Started Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 py-12 border-t border-white/5 text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded bg-brand-500 flex items-center justify-center text-white font-bold text-xs">B</div>
+                <span class="text-white font-semibold">Baranded</span>
+            </div>
+            
+            <div class="flex gap-8">
+                <a href="https://app.baranded.com/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="https://app.baranded.com/terms" class="hover:text-white transition-colors">Terms of Use</a>
+            </div>
+
+            <div>
+                &copy; 2025 Baranded. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ Toggle Logic
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Toggle Content
+            content.classList.toggle('hidden');
+            
+            // Rotate Icon
+            if (content.classList.contains('hidden')) {
+                icon.style.transform = 'rotate(0deg)';
+                button.parentElement.classList.remove('bg-white/10');
+            } else {
+                icon.style.transform = 'rotate(180deg)';
+                button.parentElement.classList.add('bg-white/10');
+            }
+        }
+        
+        // Sticky Navbar Glass Effect refinement
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
 </body>
 </html>
