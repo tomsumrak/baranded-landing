@@ -130,6 +130,9 @@
         }
     </script>
 
+    <script src="components/header.js" defer></script>
+    <script src="components/footer.js" defer></script>
+
     <style>
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
@@ -144,13 +147,6 @@
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #22c55e;
-        }
-        
-        .glass-nav {
-            background: rgba(10, 10, 10, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .text-glow {
@@ -168,51 +164,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <img src="assets/logo-whte.png" alt="Baranded Logo" class="h-10 w-auto">
-                </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Features</a>
-                    <a href="#how-it-works" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">How it Works</a>
-                    <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">FAQ</a>
-                </div>
-
-                <!-- CTA Buttons -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="https://app.baranded.com/login" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Login</a>
-                    <a href="https://app.baranded.com/signup" class="px-5 py-2.5 rounded-full bg-white text-dark-900 text-sm font-bold hover:bg-brand-400 hover:text-dark-900 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(74,222,128,0.4)]">
-                        Start Free
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-dark-900 border-b border-white/5">
-            <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#features" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md">Features</a>
-                <a href="#how-it-works" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md">How it Works</a>
-                <a href="#faq" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md">FAQ</a>
-                <div class="mt-4 pt-4 border-t border-white/10 flex flex-col gap-3">
-                    <a href="https://app.baranded.com/login" class="block text-center text-slate-300 hover:text-white font-medium">Login</a>
-                    <a href="https://app.baranded.com/signup" class="block text-center px-5 py-3 rounded-lg bg-brand-500 text-white font-bold hover:bg-brand-400 transition-colors">Start Free</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <site-header></site-header>
 
     <!-- Hero Section -->
     <section class="relative z-10 pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -446,35 +398,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark-950 py-12 border-t border-white/5 text-sm text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-2">
-                <img src="assets/logo-whte.png" alt="Baranded Logo" class="h-10 w-auto">
-            </div>
-            
-            <div class="flex gap-8">
-                <a href="https://app.baranded.com/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="https://app.baranded.com/terms" class="hover:text-white transition-colors">Terms of Use</a>
-            </div>
-
-            <div>
-                &copy; 2025 Baranded. All rights reserved.
-            </div>
-        </div>
-    </footer>
+    <site-footer></site-footer>
 
     <!-- Scripts -->
     <script>
         // Initialize Icons
         lucide.createIcons();
-
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
 
         // FAQ Toggle Logic
         function toggleFaq(button) {
@@ -493,16 +422,6 @@
                 button.parentElement.classList.add('bg-white/10');
             }
         }
-        
-        // Sticky Navbar Glass Effect refinement
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 10) {
-                nav.classList.add('shadow-lg');
-            } else {
-                nav.classList.remove('shadow-lg');
-            }
-        });
     </script>
 </body>
 </html>
