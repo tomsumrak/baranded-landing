@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Logo Maker & Brand Generator – Baranded</title>
+    <meta name="description" content="Create a professional YouTube logo and complete channel brand identity in minutes. Get your avatar, channel banner, colors, and fonts free.">
+    <link rel="icon" type="image/png" href="/assets/favicon_baranded.png">
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            900: '#14532d',
+                            950: '#052e16',
+                        },
+                        accent: {
+                            400: '#a3e635',
+                        },
+                        dark: {
+                            900: '#0a0a0a',
+                            800: '#171717',
+                            700: '#262626',
+                            600: '#404040',
+                        }
+                    },
+                    backgroundImage: {
+                        'card-gradient': 'linear-gradient(145deg, rgba(23, 23, 23, 1) 0%, rgba(10, 10, 10, 1) 100%)',
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Header and Footer Components -->
+    <script src="/components/header.js" defer></script>
+    <script src="/components/footer.js" defer></script>
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #262626; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #22c55e; }
+
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+        }
+
+        .youtube-red {
+            color: #FF0000;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-slate-200 antialiased selection:bg-brand-500 selection:text-white overflow-x-hidden">
+
+    <!-- Background Ambient Glow -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-500/20 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob"></div>
+        <div class="absolute top-[30%] right-[-10%] w-96 h-96 bg-red-600/10 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob animation-delay-2000"></div>
+    </div>
+
+    <!-- Navigation -->
+    <site-header></site-header>
+
+    <!-- Hero Section -->
+    <header class="relative z-10 pt-36 pb-20 lg:pt-40 lg:pb-24">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300 text-sm font-semibold mb-8 animate-fade-in opacity-0">
+                <i data-lucide="youtube" class="w-4 h-4 youtube-red"></i>
+                YouTube Brand Builder
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6 leading-[1.3] animate-slide-up opacity-0" style="animation-delay: 0.1s;">
+                More than just a logo. <br class="hidden md:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-accent-400 text-glow">Build a YouTube Channel Identity.</span>
+            </h1>
+
+            <p class="mt-6 text-lg md:text-xl text-slate-400 animate-slide-up opacity-0 max-w-3xl mx-auto" style="animation-delay: 0.2s;">
+                Stop searching for generic icons. Enter your channel name, and our AI will generate a complete brand snapshot—including your avatar, channel banner layout, colors, and fonts to help you turn viewers into loyal subscribers.
+            </p>
+
+            <div class="mt-10 max-w-xl mx-auto animate-slide-up opacity-0" style="animation-delay: 0.3s;">
+                <form action="https://app.baranded.com/signup" method="GET" class="flex flex-col sm:flex-row gap-3 p-2 bg-dark-800/80 backdrop-blur border border-white/10 rounded-2xl shadow-2xl focus-within:border-brand-500/50 transition-colors">
+                    <div class="relative flex-grow flex items-center">
+                        <i data-lucide="play-circle" class="absolute left-4 w-5 h-5 text-slate-500"></i>
+                        <input type="text" name="channel_name" placeholder="Enter your channel name..." required
+                            class="w-full bg-transparent border-none text-white px-12 py-3 focus:outline-none placeholder-slate-500 text-lg">
+                    </div>
+                    <button type="submit" class="px-8 py-3.5 bg-brand-500 hover:bg-brand-400 text-dark-900 font-bold rounded-xl transition-all shadow-[0_0_20px_rgba(34,197,94,0.3)] whitespace-nowrap">
+                        Generate Brand
+                    </button>
+                </form>
+                <p class="text-xs text-slate-500 mt-4 font-medium flex items-center justify-center gap-4">
+                    <span class="flex items-center gap-1"><i data-lucide="check" class="w-3 h-3 text-brand-500"></i> Free to start</span>
+                    <span class="flex items-center gap-1"><i data-lucide="check" class="w-3 h-3 text-brand-500"></i> No credit card required</span>
+                </p>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Visual Mockup Section -->
+    <section class="relative z-10 pb-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Simulated YouTube UI Mockup -->
+            <div class="bg-dark-900 border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+                <!-- Channel Banner -->
+                <div class="h-48 md:h-64 bg-card-gradient relative flex items-center justify-center overflow-hidden group">
+                    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 24px 24px;"></div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/20 rounded-full blur-[100px]"></div>
+
+                    <h2 class="relative z-10 text-4xl md:text-6xl font-black text-white uppercase tracking-widest opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        Vlog<span class="text-brand-400">Squad</span>
+                    </h2>
+
+                    <!-- Decorative Elements -->
+                    <div class="absolute top-8 left-8 w-24 h-2 bg-brand-500 rounded"></div>
+                    <div class="absolute bottom-8 right-8 w-32 h-2 bg-white/20 rounded"></div>
+                </div>
+
+                <!-- Channel Info Bar -->
+                <div class="bg-dark-800 p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-6 border-b border-white/5">
+                    <!-- Avatar (Overlapping banner) -->
+                    <div class="relative -mt-16 md:-mt-20 w-24 h-24 md:w-32 md:h-32 rounded-full bg-dark-900 p-1">
+                        <div class="w-full h-full rounded-full bg-brand-500 flex items-center justify-center border border-white/10">
+                            <span class="text-4xl md:text-5xl font-black text-dark-900">V</span>
+                        </div>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="flex-grow text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-white flex items-center justify-center md:justify-start gap-2">
+                            VlogSquad <i data-lucide="check-circle" class="w-5 h-5 text-slate-400 fill-slate-800"></i>
+                        </h3>
+                        <p class="text-slate-400 text-sm mt-1">@VlogSquadOfficial • 1.2M subscribers • 450 videos</p>
+                        <p class="text-slate-300 text-sm mt-3 max-w-2xl hidden md:block">Daily vlogs, tech reviews, and lifestyle content. New videos every Tuesday and Friday! Make sure to subscribe.</p>
+                    </div>
+
+                    <!-- Subscribe Button -->
+                    <div class="flex-shrink-0">
+                        <button class="px-6 py-2.5 bg-white text-black font-bold rounded-full hover:bg-slate-200 transition-colors">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-sm text-slate-500 mt-6">Example of a cohesive channel identity generated with Baranded.</p>
+        </div>
+    </section>
+
+    <!-- Why Baranded for YouTube -->
+    <section class="relative z-10 py-24 bg-dark-900 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why use Baranded for your channel?</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Standard logo makers just give you an icon. We give you a complete brand system so your channel looks professional instantly.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-3xl bg-dark-800 border border-white/10 hover:border-brand-500/30 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center mb-6">
+                        <i data-lucide="monitor-play" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Perfect Channel Art</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Your logo is automatically placed into channel banner templates perfectly sized (2560 x 1440 px) for TV, Desktop, and Mobile safe zones. No more cropped text.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-3xl bg-dark-800 border border-white/10 hover:border-brand-500/30 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center mb-6">
+                        <i data-lucide="palette" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Consistent Colors & Fonts</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        We generate a cohesive color palette and font pairing. Use these same fonts and colors in your video thumbnails so viewers instantly recognize your content.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-3xl bg-dark-800 border border-white/10 hover:border-brand-500/30 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-6">
+                        <i data-lucide="image" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Profile Pics & Watermarks</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Download high-res, circular-safe avatars (800 x 800 px) and transparent PNGs to use as your in-video subscribe watermark in the bottom right corner.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How to create a YouTube logo -->
+    <section class="relative z-10 py-24 bg-dark-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">How to create your YouTube logo in 3 steps</h2>
+                    <p class="text-lg text-slate-400 mb-10">You don't need Photoshop or a freelance designer to get started. Just follow our AI guide.</p>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20 flex items-center justify-center font-bold text-lg">1</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Define your channel's vibe</h4>
+                                <p class="text-slate-400 text-sm">Tell us your channel name, your niche (gaming, beauty, tech, education), and the personality you want to project.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20 flex items-center justify-center font-bold text-lg">2</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Review your Brand Snapshot</h4>
+                                <p class="text-slate-400 text-sm">Our AI generates custom color palettes, typography pairings, and a mission statement that fits your content style.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20 flex items-center justify-center font-bold text-lg">3</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">Generate & Download</h4>
+                                <p class="text-slate-400 text-sm">Select your favorite logo mark. We'll automatically apply it to avatars, transparent watermarks, and channel art banners.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual -->
+                <div class="relative h-96 rounded-2xl bg-dark-800 border border-white/10 flex items-center justify-center overflow-hidden group p-8">
+                     <div class="w-full max-w-sm bg-dark-900 border border-white/10 rounded-xl p-5 shadow-2xl relative">
+                        <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                            <div class="w-20 h-4 bg-white/20 rounded"></div>
+                            <div class="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-xs font-bold text-black">JS</div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="w-full h-24 bg-card-gradient border border-white/5 rounded-lg flex items-center justify-center">
+                                <i data-lucide="image" class="w-8 h-8 text-slate-600"></i>
+                            </div>
+                            <div class="flex gap-3">
+                                <div class="w-1/2 h-8 bg-brand-500/20 rounded border border-brand-500/30"></div>
+                                <div class="w-1/2 h-8 bg-white/5 rounded"></div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-dark-900 border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">YouTube Branding FAQs</h2>
+
+            <div class="space-y-4">
+                <!-- Item 1 -->
+                <div class="border border-white/10 rounded-xl overflow-hidden bg-white/5 transition-all duration-300 hover:border-brand-500/30">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center text-slate-200 font-medium focus:outline-none" onclick="toggleFaq(this)">
+                        What size should my YouTube logo (profile picture) be?
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400 text-sm border-t border-white/5 pt-4">
+                        YouTube recommends uploading an 800 x 800 px image for your profile picture. It will render as a circle at 98 x 98 px, so make sure your logo mark is centered and readable at small sizes.
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="border border-white/10 rounded-xl overflow-hidden bg-white/5 transition-all duration-300 hover:border-brand-500/30">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center text-slate-200 font-medium focus:outline-none" onclick="toggleFaq(this)">
+                        What are the dimensions for YouTube Channel Art (Banners)?
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400 text-sm border-t border-white/5 pt-4">
+                        The recommended size is 2560 x 1440 px. However, the "safe area" for text and logos that will display correctly across all devices (mobile, desktop, TV) is the center 1546 x 423 px. Baranded's templates account for this safe zone automatically.
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="border border-white/10 rounded-xl overflow-hidden bg-white/5 transition-all duration-300 hover:border-brand-500/30">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center text-slate-200 font-medium focus:outline-none" onclick="toggleFaq(this)">
+                        Do I need a transparent logo for YouTube?
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400 text-sm border-t border-white/5 pt-4">
+                        You don't need a transparent background for your main profile picture. However, you <strong>do</strong> need a transparent PNG if you want to use your logo as a custom video watermark (the small subscribe button in the bottom right corner of your videos). Baranded provides transparent PNG options.
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="border border-white/10 rounded-xl overflow-hidden bg-white/5 transition-all duration-300 hover:border-brand-500/30">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center text-slate-200 font-medium focus:outline-none" onclick="toggleFaq(this)">
+                        Can I use the logo on my video thumbnails?
+                        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400 text-sm border-t border-white/5 pt-4">
+                        Absolutely. You own the rights to the designs you create with Baranded. We recommend using your brand's specific color palette and typography consistently across all your thumbnails for maximum recognition.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-900/20 to-dark-900"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to upgrade your channel?</h2>
+            <p class="text-slate-300 mb-10 text-lg max-w-2xl mx-auto">Stop using generic clip art. Build a cohesive YouTube brand identity that makes people want to hit subscribe.</p>
+
+            <a href="https://app.baranded.com/signup" class="inline-block px-10 py-5 bg-brand-500 text-dark-900 font-bold text-lg rounded-xl hover:bg-brand-400 transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_40px_rgba(34,197,94,0.3)] mb-4">
+                Start Building Free
+            </a>
+            <p class="text-xs text-slate-500">No credit card required. Generate your brand in minutes.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <site-footer></site-footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // FAQ Toggle Logic
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+
+            content.classList.toggle('hidden');
+            if (content.classList.contains('hidden')) {
+                icon.style.transform = 'rotate(0deg)';
+                button.parentElement.classList.remove('bg-white/10');
+            } else {
+                icon.style.transform = 'rotate(180deg)';
+                button.parentElement.classList.add('bg-white/10');
+            }
+        }
+    </script>
+</body>
+</html>
