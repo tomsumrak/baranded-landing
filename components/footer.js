@@ -8,6 +8,7 @@ class SiteFooter extends HTMLElement {
             </div>
 
             <div class="flex gap-8">
+                <a href="/baranded-plus" class="hover:text-white transition-colors">Pricing</a>
                 <a href="https://app.baranded.com/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
                 <a href="https://app.baranded.com/terms" class="hover:text-white transition-colors">Terms of Use</a>
             </div>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Start building your brand for free with Baranded. Upgrade to Plus when you need more creative firepower and monthly output.">
+  <title>Pricing & Features - Baranded</title>
+  <link rel="icon" type="image/png" href="/assets/favicon_baranded.png">
+  <meta property="og:image" content="/assets/og-image-.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', "sans-serif"],
+          },
+          colors: {
+            brand: {
+              50: "#f0fdf4",
+              100: "#dcfce7",
+              200: "#bbf7d0",
+              300: "#86efac",
+              400: "#4ade80",
+              500: "#22c55e",
+              600: "#16a34a",
+              700: "#15803d",
+              800: "#166534",
+              900: "#14532d",
+              950: "#052e16",
+            },
+            accent: {
+              400: "#a3e635",
+              500: "#84cc16",
+            },
+            dark: {
+              900: "#0a0a0a",
+              950: "#050505",
+              800: "#171717",
+              700: "#262626",
+              600: "#404040",
+            },
+          },
+          animation: {
+            blob: "blob 7s infinite",
+          },
+          keyframes: {
+            blob: {
+              "0%": { transform: "translate(0px, 0px) scale(1)" },
+              "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+              "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+              "100%": { transform: "translate(0px, 0px) scale(1)" },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <script src="/components/header.js" defer></script>
+  <script src="/components/footer.js" defer></script>
+
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0a0a0a; }
+    ::-webkit-scrollbar-thumb { background: #262626; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #22c55e; }
+
+    #topbar-container {
+      min-height: 80px;
+    }
+
+    .glass-card {
+      background: rgba(23, 23, 23, 0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .plan-card {
+      background: linear-gradient(145deg, rgba(23, 23, 23, 0.92) 0%, rgba(10, 10, 10, 0.92) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    .plan-card--featured {
+      background: linear-gradient(145deg, rgba(34, 197, 94, 0.12) 0%, rgba(10, 10, 10, 0.94) 58%);
+      border: 1px solid rgba(74, 222, 128, 0.45);
+      box-shadow: 0 24px 60px rgba(34, 197, 94, 0.12);
+    }
+
+    .feature-grid {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-slate-200 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col relative overflow-x-hidden">
+  <div class="fixed inset-0 z-0 pointer-events-none">
+    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-500/10 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-accent-400/5 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob"></div>
+  </div>
+
+  <div id="topbar-container" class="relative z-50">
+    <site-header></site-header>
+  </div>
+
+  <main class="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+    <header class="max-w-4xl mx-auto text-center mb-16 lg:mb-24">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-sm font-semibold mb-8">
+        <i data-lucide="zap" class="w-4 h-4"></i>
+        Baranded Plus
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.08]">
+        Unlock the full power
+        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-accent-400">
+          of your brand's potential.
+        </span>
+      </h1>
+
+      <p class="mt-6 text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
+        Your free account gives you the foundation. Baranded Plus gives you the output. Upgrade to access premium templates, brand-aware AI copywriting, and the monthly credits you need to scale.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://app.baranded.com/signup" class="px-8 py-4 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 font-bold transition-colors w-full sm:w-auto">
+          Create Free Account
+        </a>
+        <a href="#pricing" class="px-8 py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-white font-bold transition-colors w-full sm:w-auto">
+          View Plus Plans
+        </a>
+      </div>
+    </header>
+
+    <!-- Value Prop / Features Grid (Plus Focused) -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+      <article class="glass-card rounded-3xl p-7 feature-grid border border-white/5 hover:border-brand-500/30 transition-colors">
+        <div class="inline-flex p-3 rounded-2xl bg-indigo-500/10 text-indigo-400 mb-5">
+          <i data-lucide="layout-template" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Premium Templates</h3>
+        <p class="text-sm text-slate-400">Access high-end, exclusive layouts and monthly design drops that automatically sync with your brand colors and fonts.</p>
+      </article>
+
+      <article class="glass-card rounded-3xl p-7 feature-grid border border-white/5 hover:border-brand-500/30 transition-colors">
+        <div class="inline-flex p-3 rounded-2xl bg-brand-500/10 text-brand-400 mb-5">
+          <i data-lucide="coins" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">600 Monthly Credits</h3>
+        <p class="text-sm text-slate-400">Fuel your creative engine. Use your monthly pool for copywriting, palette expansions, and massive logo refresh runs.</p>
+      </article>
+
+      <article class="glass-card rounded-3xl p-7 feature-grid border border-white/5 hover:border-brand-500/30 transition-colors">
+        <div class="inline-flex p-3 rounded-2xl bg-blue-500/10 text-blue-400 mb-5">
+          <i data-lucide="message-square-dashed" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Brand-Aware Copy</h3>
+        <p class="text-sm text-slate-400">Generate headlines, ad copy, and campaign text that perfectly matches the audience and tone saved in your brand profile.</p>
+      </article>
+
+      <article class="glass-card rounded-3xl p-7 feature-grid border border-white/5 hover:border-brand-500/30 transition-colors">
+        <div class="inline-flex p-3 rounded-2xl bg-amber-500/10 text-amber-400 mb-5">
+          <i data-lucide="wand-2" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Advanced Iteration</h3>
+        <p class="text-sm text-slate-400">Unlock deep color palette expansions and logo regeneration runs to explore new directions without losing your identity.</p>
+      </article>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="mb-24 scroll-mt-24">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-white mb-4">Choose the plan that fits your output</h2>
+        <div class="flex justify-center items-center gap-4 mt-8">
+          <span id="monthly-label" class="text-sm font-medium text-slate-500 transition-colors">Monthly</span>
+
+          <button
+            type="button"
+            id="billing-toggle"
+            class="relative inline-flex h-8 w-14 rounded-full border border-white/10 bg-dark-700 p-1 transition-colors"
+            aria-label="Toggle billing frequency"
+            aria-pressed="true"
+          >
+            <span
+              id="billing-toggle-knob"
+              class="h-6 w-6 rounded-full bg-brand-500 shadow-[0_0_18px_rgba(34,197,94,0.35)] transition-transform duration-300 translate-x-6"
+            ></span>
+          </button>
+
+          <div class="flex items-center gap-2">
+            <span id="yearly-label" class="text-sm font-bold text-white transition-colors">Annually</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-brand-500/20 text-brand-400 uppercase tracking-wide border border-brand-500/20">
+              2 Months Free
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto">
+        <!-- Free Plan -->
+        <section class="plan-card rounded-3xl p-8 flex flex-col">
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold text-white mb-2">Baranded Free</h2>
+            <p class="text-sm text-slate-400 min-h-[40px]">The perfect starting point. Build your brand profile and generate your core assets at no cost.</p>
+          </div>
+
+          <div class="mb-8">
+            <div class="flex items-baseline gap-1">
+              <span class="text-5xl font-extrabold text-white">$0</span>
+              <span class="text-slate-500">/ forever</span>
+            </div>
+            <p class="text-sm text-transparent select-none mt-2">No credit card required</p>
+          </div>
+
+          <ul class="space-y-4 mb-8 flex-grow">
+            <li class="flex items-start gap-3 text-slate-300">
+              <i data-lucide="check" class="w-5 h-5 text-slate-500 shrink-0 mt-0.5"></i>
+              <span>AI Brand Snapshot with mission, tone, colors, and fonts</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-300">
+              <i data-lucide="check" class="w-5 h-5 text-slate-500 shrink-0 mt-0.5"></i>
+              <span>Logo generation with core editing tools</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-300">
+              <i data-lucide="check" class="w-5 h-5 text-slate-500 shrink-0 mt-0.5"></i>
+              <span>Access to the core template library</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-300">
+              <i data-lucide="check" class="w-5 h-5 text-slate-500 shrink-0 mt-0.5"></i>
+              <span>Saved brand profile for future work</span>
+            </li>
+          </ul>
+
+          <a href="https://app.baranded.com/signup" class="w-full py-4 rounded-xl bg-white text-dark-900 text-center font-bold hover:bg-slate-200 transition-colors">
+            Get Started for Free
+          </a>
+          <p class="text-center text-xs text-slate-500 mt-3">No credit card required.</p>
+        </section>
+
+        <!-- Plus Plan -->
+        <section class="plan-card plan-card--featured rounded-3xl p-8 flex flex-col relative overflow-hidden">
+          <div class="absolute top-5 right-5 px-3 py-1 rounded-full bg-brand-500/15 border border-brand-500/25 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-400">
+            Premium
+          </div>
+
+          <div class="mb-8 pr-20">
+            <h2 class="text-2xl font-bold text-brand-400 mb-2 flex items-center gap-2">
+              Baranded Plus
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </h2>
+            <p class="text-sm text-slate-300 min-h-[40px]">For teams that publish often and want more premium creative firepower.</p>
+          </div>
+
+          <div class="mb-8">
+            <div class="flex items-baseline gap-1">
+              <span id="plus-price-amount" class="text-5xl font-extrabold text-white">$190</span>
+              <span id="plus-price-period" class="text-slate-400">/ year</span>
+            </div>
+            <p id="plus-price-note" class="text-sm text-brand-400 font-medium mt-2">Billed annually (2 months free)</p>
+          </div>
+
+          <div class="text-sm font-bold text-white mb-4 uppercase tracking-wide">Everything in Free, plus:</div>
+
+          <ul class="space-y-4 mb-8 flex-grow">
+            <li class="flex items-start gap-3 text-slate-200">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="font-bold block">Premium templates</span>
+                <span class="text-sm text-slate-400">Access the full Plus library and monthly drops.</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3 text-slate-200">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="font-bold block">600 credits every month</span>
+                <span class="text-sm text-slate-400">Use them across content, colors, and creative iteration.</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3 text-slate-200">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="font-bold block">Brand-aware AI copywriting</span>
+                <span class="text-sm text-slate-400">Generate headlines, descriptions, and campaign copy faster.</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3 text-slate-200">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="font-bold block">Advanced iteration tools</span>
+                <span class="text-sm text-slate-400">Expand palettes and refresh logos while matching your brand system.</span>
+              </div>
+            </li>
+          </ul>
+
+          <a href="https://app.baranded.com/signup" class="w-full py-4 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 text-center font-bold transition-colors block">
+            Start Free to Upgrade
+          </a>
+
+          <p class="text-center text-xs text-slate-400 mt-3">Create your free account first. Upgrade anytime from your dashboard.</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- Deep Dive: Credits Section -->
+    <section class="mb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        <div class="glass-card rounded-3xl p-8 md:p-10 feature-grid flex items-center justify-center min-h-[320px] relative overflow-hidden order-2 lg:order-1">
+          <div class="absolute inset-0 bg-brand-500/5"></div>
+          <div class="relative z-10 text-center">
+            <div class="text-8xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-600 mb-3">
+              600
+            </div>
+            <div class="text-brand-400 font-bold tracking-[0.28em] uppercase text-sm">Credits Recharged</div>
+            <p class="text-slate-500 text-sm mt-4 max-w-xs mx-auto">
+              A monthly credit pool available on the Plus plan for generation and iteration.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-3xl p-8 md:p-10 order-1 lg:order-2">
+          <div class="inline-flex p-3 rounded-2xl bg-brand-500/10 text-brand-400 mb-6">
+            <i data-lucide="coins" class="w-6 h-6"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-white mb-4">Flexible power for active creators</h2>
+          <p class="text-slate-400 text-lg mb-8">
+            Baranded Plus runs on a flexible credit system. Use them where you need them most, whether that is faster copy, palette exploration, or new creative directions.
+          </p>
+
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center justify-between gap-4 rounded-2xl border border-white/5 bg-dark-800/80 px-4 py-3">
+              <span class="text-slate-300 text-sm flex items-center gap-2">
+                <i data-lucide="pen-tool" class="w-4 h-4 text-slate-500"></i>
+                Copywriting assist
+              </span>
+              <span class="text-brand-400 font-mono text-sm">1-3 cr</span>
+            </div>
+            <div class="flex items-center justify-between gap-4 rounded-2xl border border-white/5 bg-dark-800/80 px-4 py-3">
+              <span class="text-slate-300 text-sm flex items-center gap-2">
+                <i data-lucide="palette" class="w-4 h-4 text-slate-500"></i>
+                Palette expansion
+              </span>
+              <span class="text-brand-400 font-mono text-sm">2-5 cr</span>
+            </div>
+            <div class="flex items-center justify-between gap-4 rounded-2xl border border-white/5 bg-dark-800/80 px-4 py-3">
+              <span class="text-slate-300 text-sm flex items-center gap-2">
+                <i data-lucide="image" class="w-4 h-4 text-slate-500"></i>
+                Logo regeneration
+              </span>
+              <span class="text-brand-400 font-mono text-sm">8-15 cr</span>
+            </div>
+            <div class="flex items-center justify-between gap-4 rounded-2xl border border-white/5 bg-dark-800/80 px-4 py-3">
+              <span class="text-slate-300 text-sm flex items-center gap-2">
+                <i data-lucide="refresh-cw" class="w-4 h-4 text-slate-500"></i>
+                Brand refresh run
+              </span>
+              <span class="text-brand-400 font-mono text-sm">25-50 cr</span>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-500">
+            In practice, 600 credits goes a long way for regular creative output.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Comparison -->
+    <section class="glass-card rounded-3xl p-6 md:p-10 border border-white/10 mb-20">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-bold uppercase tracking-wider mb-4">
+            <i data-lucide="badge-check" class="w-3 h-3"></i>
+            Compare Plans
+          </div>
+          <h2 class="text-3xl font-bold text-white mb-2">Detailed feature breakdown</h2>
+          <p class="text-slate-400 max-w-2xl">See exactly what you get when you start for free, and what unlocks when you upgrade to Plus.</p>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full min-w-[680px] text-left border-collapse">
+          <thead>
+            <tr class="border-b border-white/5">
+              <th class="py-4 pr-6 text-slate-400 font-medium text-sm w-1/2">Feature</th>
+              <th class="py-4 px-6 text-white font-bold text-center text-sm w-1/4">Free</th>
+              <th class="py-4 pl-6 text-brand-400 font-bold text-center text-sm w-1/4">Plus</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="border-b border-white/5">
+              <td class="py-4 pr-6 text-white">AI Brand Snapshot (Mission, Audience, Tone)</td>
+              <td class="py-4 px-6 text-center text-slate-300">Included</td>
+              <td class="py-4 pl-6 text-center text-brand-400">Included</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="py-4 pr-6 text-white">Logo generation and editing</td>
+              <td class="py-4 px-6 text-center text-slate-300">Included</td>
+              <td class="py-4 pl-6 text-center text-brand-400">Included</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="py-4 pr-6 text-white">Template library</td>
+              <td class="py-4 px-6 text-center text-slate-300">Core library</td>
+              <td class="py-4 pl-6 text-center text-brand-400">Premium plus monthly drops</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="py-4 pr-6 text-white">Monthly generation credits</td>
+              <td class="py-4 px-6 text-center text-slate-500">-</td>
+              <td class="py-4 pl-6 text-center text-brand-400">600 / month</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="py-4 pr-6 text-white">Brand-aware AI copywriting</td>
+              <td class="py-4 px-6 text-center text-slate-500">-</td>
+              <td class="py-4 pl-6 text-center text-brand-400">Included</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-6 text-white">Advanced color and logo refresh tools</td>
+              <td class="py-4 px-6 text-center text-slate-500">-</td>
+              <td class="py-4 pl-6 text-center text-brand-400">Included</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-4xl mx-auto mb-10">
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-bold uppercase tracking-wider mb-4">
+          <i data-lucide="help-circle" class="w-3 h-3"></i>
+          FAQ
+        </div>
+        <h2 class="text-3xl font-bold text-white mb-3">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-4">
+        <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
+          <button type="button" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 text-slate-200 font-medium" data-faq-trigger>
+            <span>Do I need a credit card to sign up?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
+          </button>
+          <div class="hidden px-6 pb-6 pt-1 text-sm text-slate-400 border-t border-white/5" data-faq-panel>
+            No. You can create a Baranded Free account without entering any payment information. You only need a credit card if you decide to upgrade to Baranded Plus later.
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
+          <button type="button" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 text-slate-200 font-medium" data-faq-trigger>
+            <span>How do I upgrade to Plus?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
+          </button>
+          <div class="hidden px-6 pb-6 pt-1 text-sm text-slate-400 border-t border-white/5" data-faq-panel>
+            First, create your free account. Once you are logged in and have set up your brand profile, you can navigate to the upgrade section in your dashboard to start your Plus subscription.
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
+          <button type="button" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 text-slate-200 font-medium" data-faq-trigger>
+            <span>Will I be able to cancel anytime?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
+          </button>
+          <div class="hidden px-6 pb-6 pt-1 text-sm text-slate-400 border-t border-white/5" data-faq-panel>
+            Yes. You can cancel your Plus subscription at any time from your account settings. Your plan will remain active until the end of your current billing cycle.
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
+          <button type="button" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 text-slate-200 font-medium" data-faq-trigger>
+            <span>Will I keep the assets I already created if I downgrade?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 transition-transform duration-300"></i>
+          </button>
+          <div class="hidden px-6 pb-6 pt-1 text-sm text-slate-400 border-t border-white/5" data-faq-panel>
+            Yes. Your saved brand profile, logos, and existing assets will remain safely in your account. Only the Plus-exclusive generation tools and premium templates will be locked.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="max-w-3xl mx-auto text-center mt-20 mb-10 glass-card rounded-3xl p-10 md:p-14 border border-brand-500/20">
+      <h2 class="text-3xl font-bold text-white mb-4">Ready to build your brand?</h2>
+      <p class="text-slate-400 mb-8 max-w-xl mx-auto">Join today to instantly generate your brand profile, color palettes, and core assets.</p>
+      <a href="https://app.baranded.com/signup" class="inline-block px-8 py-4 rounded-xl bg-brand-500 hover:bg-brand-400 text-dark-900 font-bold transition-colors w-full sm:w-auto">
+        Create Your Free Account
+      </a>
+    </section>
+
+  </main>
+
+  <div id="footer-container" class="relative z-10 mt-auto">
+    <site-footer></site-footer>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    const plusPlanPricing = {
+      monthly: {
+        amount: "$19",
+        period: "/ month",
+        note: "Billed monthly",
+      },
+      yearly: {
+        amount: "$190",
+        period: "/ year",
+        note: "Billed annually (2 months free)",
+      },
+    };
+
+    const billingToggle = document.getElementById("billing-toggle");
+    const billingToggleKnob = document.getElementById("billing-toggle-knob");
+    const monthlyLabel = document.getElementById("monthly-label");
+    const yearlyLabel = document.getElementById("yearly-label");
+    const plusPriceAmount = document.getElementById("plus-price-amount");
+    const plusPricePeriod = document.getElementById("plus-price-period");
+    const plusPriceNote = document.getElementById("plus-price-note");
+    let isYearlyBilling = true;
+
+    function applyBillingState() {
+      const billingState = isYearlyBilling ? plusPlanPricing.yearly : plusPlanPricing.monthly;
+
+      plusPriceAmount.textContent = billingState.amount;
+      plusPricePeriod.textContent = billingState.period;
+      plusPriceNote.textContent = billingState.note;
+
+      billingToggle.setAttribute("aria-pressed", String(isYearlyBilling));
+      billingToggleKnob.classList.toggle("translate-x-6", isYearlyBilling);
+      billingToggle.classList.toggle("bg-dark-700", isYearlyBilling);
+      billingToggle.classList.toggle("bg-dark-800", !isYearlyBilling);
+
+      yearlyLabel.classList.toggle("text-white", isYearlyBilling);
+      yearlyLabel.classList.toggle("text-slate-500", !isYearlyBilling);
+      monthlyLabel.classList.toggle("text-white", !isYearlyBilling);
+      monthlyLabel.classList.toggle("text-slate-500", isYearlyBilling);
+    }
+
+    billingToggle.addEventListener("click", () => {
+      isYearlyBilling = !isYearlyBilling;
+      applyBillingState();
+    });
+
+    applyBillingState();
+
+    document.querySelectorAll("[data-faq-trigger]").forEach(button => {
+      button.addEventListener("click", () => {
+        const card = button.parentElement;
+        const panel = card.querySelector("[data-faq-panel]");
+        const icon = button.querySelector("svg");
+        const isOpen = !panel.classList.contains("hidden");
+
+        panel.classList.toggle("hidden", isOpen);
+        if (icon) {
+          icon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
