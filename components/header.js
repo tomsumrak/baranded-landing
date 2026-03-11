@@ -18,11 +18,14 @@ class SiteHeader extends HTMLElement {
                 </div>
 
                 <!-- CTA Buttons -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="https://app.baranded.com/login" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Login</a>
-                    <a href="https://app.baranded.com/signup" class="px-5 py-2.5 rounded-full bg-white text-dark-900 text-sm font-bold hover:bg-brand-400 hover:text-dark-900 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(74,222,128,0.4)]">
-                        Start Free
-                    </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/baranded-plus" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Pricing</a>
+                    <div class="flex items-center space-x-4">
+                        <a href="https://app.baranded.com/login" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Login</a>
+                        <a href="https://app.baranded.com/signup" class="px-5 py-2.5 rounded-full bg-white text-dark-900 text-sm font-bold hover:bg-brand-400 hover:text-dark-900 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(74,222,128,0.4)]">
+                            Start Free
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -38,6 +41,7 @@ class SiteHeader extends HTMLElement {
         <div id="mobile-menu" class="hidden md:hidden bg-dark-900 border-b border-white/5">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <div class="flex flex-col gap-3">
+                    <a href="/baranded-plus" class="block text-center text-slate-300 hover:text-white font-medium">Pricing</a>
                     <a href="https://app.baranded.com/login" class="block text-center text-slate-300 hover:text-white font-medium">Login</a>
                     <a href="https://app.baranded.com/signup" class="block text-center px-5 py-3 rounded-lg bg-brand-500 text-white font-bold hover:bg-brand-400 transition-colors">Start Free</a>
                 </div>
