@@ -156,6 +156,69 @@
         .text-glow {
             text-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
         }
+
+        .bb-footer {
+            background: #0a0a0a;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 24px 20px;
+            color: #cbd5e1;
+            font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+        }
+
+        .bb-footer__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .bb-footer__brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bb-footer__logo-img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        .bb-footer__links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+
+        .bb-footer__links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color .15s ease;
+        }
+
+        .bb-footer__links a:hover {
+            color: #fff;
+        }
+
+        .bb-footer__copy {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+            .bb-footer__inner {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .bb-footer__links {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body class="bg-dark-900 text-slate-200 antialiased selection:bg-brand-500 selection:text-white overflow-x-hidden">
@@ -179,6 +242,7 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#features" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Features</a>
+                    <a href="#pricing" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Pricing</a>
                     <a href="#how-it-works" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">How it Works</a>
                     <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">FAQ</a>
                 </div>
@@ -204,6 +268,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-dark-900 border-b border-white/5">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#features" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md">Features</a>
+                <a href="#pricing" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md">Pricing</a>
                 <a href="#how-it-works" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md">How it Works</a>
                 <a href="#faq" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-md">FAQ</a>
                 <div class="mt-4 pt-4 border-t border-white/10 flex flex-col gap-3">
@@ -326,6 +391,140 @@
         </div>
     </section>
 
+    <!-- Pricing -->
+    <section id="pricing" class="relative z-10 py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-sm font-semibold mb-6">
+                    <i data-lucide="badge-dollar-sign" class="w-4 h-4"></i>
+                    Pricing
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get set up free, then upgrade only if you need more.</h2>
+                <p class="text-slate-400 text-lg">
+                    Baranded Free includes the core setup work: your guided questionnaire, brand snapshot,
+                    logo exploration, colors, fonts, and saved profile. Start there and move to Plus later
+                    when you want more output and premium tooling.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <section class="plan-card plan-card--featured rounded-3xl p-8 flex flex-col relative overflow-hidden" id="free-plan-card">
+                    <div class="absolute top-5 right-5 px-3 py-1 rounded-full bg-brand-500/15 border border-brand-500/25 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-300">
+                        Start Here
+                    </div>
+
+                    <div class="mb-8 pr-20">
+                        <h3 class="text-2xl font-bold text-white mb-2">Baranded Free</h3>
+                        <p class="text-sm text-slate-300 min-h-[40px]">Everything you need to get your brand foundation in place.</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-5xl font-extrabold text-white">$0</span>
+                            <span class="text-slate-400">/ forever</span>
+                        </div>
+                        <p class="text-sm text-brand-300 font-medium mt-2">Core setup and essential features included</p>
+                    </div>
+
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
+                            <div>
+                                <span class="font-bold block">Guided brand questionnaire</span>
+                                <span class="text-sm text-slate-400">Answer the key questions that shape your positioning and direction.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
+                            <div>
+                                <span class="font-bold block">AI Brand Snapshot</span>
+                                <span class="text-sm text-slate-400">Get your mission, tone, colors, and fonts organized into one clear brand profile.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
+                            <div>
+                                <span class="font-bold block">Logo generation and core editing</span>
+                                <span class="text-sm text-slate-400">Explore directions and refine the essentials without paying to get started.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
+                            <div>
+                                <span class="font-bold block">Core templates and saved profile</span>
+                                <span class="text-sm text-slate-400">Keep working from the same foundation whenever you come back.</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="https://app.baranded.com/signup" class="w-full py-4 rounded-xl bg-brand-500 text-dark-900 font-bold text-center hover:bg-brand-400 transition-colors">
+                        Start Free
+                    </a>
+
+                    <p class="text-center text-xs text-slate-400 mt-3">
+                        Most businesses can get fully set up here before they ever need Plus.
+                    </p>
+                </section>
+
+                <section class="plan-card rounded-3xl p-8 flex flex-col relative overflow-hidden" id="plus-plan-card">
+                    <div class="absolute top-5 right-5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-bold uppercase tracking-[0.18em] text-slate-300">
+                        Coming Soon
+                    </div>
+
+                    <div class="mb-8 pr-20">
+                        <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                            Baranded Plus
+                            <i data-lucide="sparkles" class="w-5 h-5 text-brand-400"></i>
+                        </h3>
+                        <p class="text-sm text-slate-300 min-h-[40px]">For brands that want more output, more variation, and faster iteration.</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-5xl font-extrabold text-white">$19</span>
+                            <span class="text-slate-400">/ month</span>
+                        </div>
+                        <p class="text-sm text-slate-500 font-medium mt-2">Upgrade later when you need premium tools</p>
+                    </div>
+
+                    <div class="text-sm font-bold text-white mb-4 uppercase tracking-wide">Everything in Free, plus:</div>
+
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check" class="w-5 h-5 text-slate-500 shrink-0 mt-0.5"></i>
+                            <span>Premium templates and monthly drops</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check" class="w-5 h-5 text-slate-500 shrink-0 mt-0.5"></i>
+                            <span>600 monthly credits for generation and iteration</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check" class="w-5 h-5 text-slate-500 shrink-0 mt-0.5"></i>
+                            <span>Brand-aware AI copywriting</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-200">
+                            <i data-lucide="check" class="w-5 h-5 text-slate-500 shrink-0 mt-0.5"></i>
+                            <span>Advanced color and logo refresh tools</span>
+                        </li>
+                    </ul>
+
+                    <button
+                        type="button"
+                        class="w-full py-4 rounded-xl border border-white/10 bg-white/5 text-white font-bold cursor-not-allowed"
+                        disabled
+                        aria-disabled="true"
+                    >
+                        Plus Coming Soon
+                    </button>
+
+                    <p class="text-center text-xs text-slate-500 mt-3">
+                        Keep the free core setup, then add Plus when you want more production power.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </section>
+
     <!-- How It Works Timeline -->
     <section id="how-it-works" class="relative z-10 py-24 bg-dark-800 border-y border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -426,7 +625,9 @@
                         <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
                     </button>
                     <div class="hidden px-6 pb-6 text-slate-400 text-sm border-t border-white/5 pt-4">
-                        Yes! Baranded is currently free to use to help you get your business off the ground with a solid identity.
+                        Yes. Baranded Free covers the full core setup: guided questions, your brand snapshot,
+                        logo exploration, colors, fonts, and your saved brand profile. Plus is for extra output
+                        and premium tooling once you need more than the essentials.
                     </div>
                 </div>
             </div>
@@ -446,20 +647,20 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark-950 py-12 border-t border-white/5 text-sm text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-2">
-                <img src="assets/logo-whte.png" alt="Baranded Logo" class="h-10 w-auto">
-            </div>
-            
-            <div class="flex gap-8">
-                <a href="https://app.baranded.com/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="https://app.baranded.com/terms" class="hover:text-white transition-colors">Terms of Use</a>
+    <footer class="bb-footer">
+        <div class="bb-footer__inner">
+            <div class="bb-footer__brand">
+                <img src="assets/logo-whte.png" alt="Baranded Logo" class="bb-footer__logo-img">
             </div>
 
-            <div>
-                &copy; 2025 Baranded. All rights reserved.
+            <div class="bb-footer__links">
+                <a href="https://app.baranded.com/privacy">Privacy Policy</a>
+                <a href="https://app.baranded.com/terms">Terms of Use</a>
+                <a href="https://app.baranded.com/refund-policy">Refund Policy</a>
+                <a href="#" onclick="if (window.openCookiePreferences) window.openCookiePreferences(); return false;">Cookie Preferences</a>
             </div>
+
+            <div class="bb-footer__copy">© <span id="footer-year"></span> Baranded. All rights reserved.</div>
         </div>
     </footer>
 
@@ -467,6 +668,8 @@
     <script>
         // Initialize Icons
         lucide.createIcons();
+
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
 
         // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
